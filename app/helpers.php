@@ -137,6 +137,9 @@ function checkUnitLock($status)
 function getStates()
 {
     $type = IdentifierType::where('title', 'STATE IDENTIFIER')->first();
+    if (!$type) {
+        return collect();
+    }
     $states = Identifier::where('identifier_type_id', $type->id)->get();
     return $states;
 }
@@ -145,6 +148,9 @@ function getStates()
 function getStateName($value)
 {
     $type = IdentifierType::where('title', 'STATE IDENTIFIER')->first();
+    if (!$type) {
+        return NULL;
+    }
     $state = Identifier::where('identifier_type_id', $type->id)->where('value', $value)->first();
     if ($state) {
         return $state->description;

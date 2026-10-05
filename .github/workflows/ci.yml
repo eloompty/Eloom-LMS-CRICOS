@@ -48,8 +48,8 @@ jobs:
           DB_USERNAME: root
           DB_PASSWORD: root
 
-      - name: Run migrations
-        run: php artisan migrate --force
+      - name: Run migrations and seed reference data
+        run: php artisan migrate --seed --force
         env:
           DB_HOST: 127.0.0.1
           DB_DATABASE: lms_testing
