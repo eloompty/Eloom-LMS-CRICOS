@@ -6,7 +6,7 @@ All notable changes to this project are recorded here. The format follows
 
 ## [Unreleased]
 
-## [1.0.0] — 2026-09-30
+## [1.0.0] — 2026-10-05
 
 First public release, extracted from a production codebase and relicensed under MIT.
 
@@ -28,6 +28,8 @@ First public release, extracted from a production codebase and relicensed under 
   and bank details from the Company record rather than hardcoded values
 - Admin-entered template names are sanitised before they are used as file names
 - Dependencies updated to the newest versions compatible with Laravel 8
+- Requires PHP 8.2, 8.3 or 8.4 (the locked dependencies no longer support 8.1); Composer is
+  pinned to the PHP 8.2 platform so updates stay installable on 8.2
 
 ### Removed
 
@@ -53,6 +55,8 @@ First public release, extracted from a production codebase and relicensed under 
   `student_intake_course_fee` permission, and the update no longer mass-assigns the request
 - dompdf runs with PHP execution disabled, and student and agent fields are escaped before
   they are inserted into offer letter and certificate templates
+- The first-run registration page no longer fails with a 500 when the state reference data
+  has not been seeded
 
 [Unreleased]: https://github.com/eloompty/Eloom-LMS-CRICOS/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/eloompty/Eloom-LMS-CRICOS/releases/tag/v1.0.0
