@@ -1,0 +1,23 @@
+{
+    "name": "eloom/assignment",
+    "description": "",
+    "authors": [
+        {
+            "name": "Eloom Pty Ltd",
+            "email": "admin@eloom.com.au"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Assignment\\": ""
+        }
+    }
+}

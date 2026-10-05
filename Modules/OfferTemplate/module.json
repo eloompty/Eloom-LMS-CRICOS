@@ -1,0 +1,13 @@
+{
+    "name": "OfferTemplate",
+    "alias": "offertemplate",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\OfferTemplate\\Providers\\OfferTemplateServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
