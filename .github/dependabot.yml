@@ -10,6 +10,10 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+    # One pull request for all updates instead of one per package.
+    groups:
+      composer:
+        update-types: ["minor", "patch"]
 
   - package-ecosystem: npm
     directory: "/"
@@ -21,8 +25,14 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+    groups:
+      npm:
+        update-types: ["minor", "patch"]
 
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: monthly
+    groups:
+      github-actions:
+        patterns: ["*"]
